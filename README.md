@@ -57,6 +57,8 @@ spring.datasource.password=sua_senha
 
 ### Documentação da API
 
+A documentação da API pode ser acessada pelo PDF ou através do Swagger na URL:
+
 ```
 http://localhost:8080/swagger-ui.html
 ```
