@@ -20,9 +20,16 @@ public class Produto {
     @NotNull(message = "O atributo preço é obrigatório!")
     private Float preco;
 
+    @NotNull(message = "O atributo quantidade é obrigatório!")
+    private int quantidade;
+
     @ManyToOne
     @JsonIgnoreProperties("produto")
     private Categoria categoria;
+
+    @ManyToOne
+    @JsonIgnoreProperties("produto")
+    private Usuario usuario;
 
     public Long getId() {
         return id;
@@ -54,5 +61,21 @@ public class Produto {
 
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }
